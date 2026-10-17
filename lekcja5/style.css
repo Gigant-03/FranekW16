@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 15%);
+}
+
+.postcard {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  /* TODO: background sky gradient */
+    background: linear-gradient(180deg,rgb(0, 91, 121), rgb(1, 44, 69));
+}
+
+.sun {
+  position: absolute;
+  top: 60px;
+  right: 80px;
+  width: 80px;
+  height: 80px;
+  /* TODO: sun shape and glow */
+  /* TODO: sun color experiment */
+  background-color: rgb(244, 149, 7);
+  border-radius: 50%;
+  box-shadow: 0 0 70px 50px rgb(249, 98, 4);
+}
+
+.hills {
+  position: absolute;
+  bottom: 20%;
+  left: -10%;
+  width: 120%;
+  height: 45%;
+  /* TODO: hills shape */
+  border-radius: 50%;
+  background: radial-gradient(circle,rgb(40,137, 7), rgb(20, 65, 5));
+}
+
+.water {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  /* TODO: water color and transparency */
+   background: linear-gradient(180deg,rgb(4, 95, 125), rgb(1, 162, 255));
+
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: Georgia, serif;
+  /* TODO: text styling and shadow */
+  /* TODO: text color experiment */
+  text-shadow: 2px 2px 20px rgba(249, 98, 4, 0.9);
+}
+
+/* HTML: <div class="cloud"></div> */
+.cloud {
+    height: 180px; /* control the size */
+    aspect-ratio: 1.8;
+    --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
+    mask: var(--g) 100% 100%/30% 60%,var(--g) 70% 0/50% 100%,var(--g) 0 100%/36% 68%,var(--g) 27% 18%/26% 40%,linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
+    background: #269af2;
+}
